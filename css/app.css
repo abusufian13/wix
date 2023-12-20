@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+body{
+    font-family: 'Source Code Pro', monospace;
+}
+.vh{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logoMenu{}
+.animatedLogo{
+    position: relative;
+    width: 500px;
+    height: 352px;
+    z-index: 9999;
+} 
+.animatedLogo svg{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.animatedLogo img{
+    width: 100%;
+     width: 600px;
+}
+ 
+.ball {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 0px 8px #4e42425e, 0px 0px 8px #00000033;
+}
+.ball::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0; 
+    position: absolute;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    transform: scale(0.4);
+    border-radius: 50%;
+}
+.ball:hover::after{  
+    opacity: 1;
+    transform: scale(1);
+
+}
+.ball1 {
+    top: 18.5%;
+    left: 41.5%;
+    transform: translate(-41.5%, -18.5%);
+}
+.ball2{
+    top: 18.5%;
+    right: 39.8%;
+    transform: translate(39.8%, -18.5%);
+}
+
+
+
+.ball3 {
+    top: 37.6%;
+    right: 26.6%;
+    transform: translate(26.6%, -37.6%);
+}
+.ball4 {
+    bottom: 35.4%;
+    right: 26.6%;
+    transform: translate(26.6%,  35.4%);
+}
+.ball5 {
+    bottom: 16.3%;
+    right: 39.8%;
+    transform: translate(39.8%, 16.3%);
+}
+.ball6 {
+    bottom: 16.2%;
+    left: 41.5%;
+    transform: translate(-41.5%, 16.2%);
+}
+
+
+.ball7 {
+    bottom: 35.5%;
+    left: 28.2%;
+    transform: translate(-28.2%,  35.5%);
+}
+.ball8{
+    top: 37.7%;
+    left: 28.2%;
+    transform: translate(-28.2%, -37.7%);
+}
+
+.ball2::after{
+    background-color: #6E0000;
+}
+.ball3::after{
+    background-color: #6E0000;
+}
+.ball4::after{
+    background-color: #8C8C00;
+}
+.ball5::after{
+    background-color: #006B00;
+}
+.ball6::after{
+    background-color: #006666;
+}
+.ball7::after{
+    background-color: #3B007F;
+}
+.ball8::after{
+    background-color: #6B006B;
+}
+.ball1::after{
+    background-color: #FFFFFF;
+}
+.logoMenu {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Move{ 
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+ }
+ .menuBox {
+    background: white;
+    z-index: 1;
+    padding: 0 8px;
+    text-decoration: none;
+ }
+ .menuBox h3{
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    font-family: 'Source Code Pro', monospace;
+    text-transform: uppercase;
+}
+.menuBox p{
+    max-width: 320px;
+    font-weight: 400;
+    color: #5c5c5c;
+    font-family: helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif;
+    font-size: 18px;
+    line-height: 1.4em;
+}
+.logoText p strong{ 
+    color: #008484;
+    font-weight: 400;
+
+} 
+.menu {
+    position: absolute;
+    max-width: 470px;
+    width: 100%;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.menu.active{
+    opacity: 1; 
+    visibility:visible;
+
+}
+.menu1{
+    top: 4%;
+    left: 5px;
+    justify-content: flex-start;
+}
+
+.menu2{
+    top: 4%;
+    right: 6px;
+    justify-content: flex-end;
+}
+.menu3 {
+    top: 23%;
+    right: 0%;
+    justify-content: flex-end;
+}
+.menu4 {
+    bottom: -24%;
+    right: 0%;
+    justify-content: flex-end;
+}
+.menu5 {
+    bottom: -34%;
+    right: 4%;
+    justify-content: flex-end;
+}
+.menu6 {
+    bottom: -20%;
+    left: 1%;
+    justify-content: flex-start;
+}
+.menu7 {
+    bottom: -15%;
+    left: 1%;
+    justify-content: flex-start;
+}
+.menu8 {
+    top: 23%;
+    left: 24px;
+    justify-content: flex-start;
+}
+
+
+.menu1, .menu7, .menu8, .menu6{
+    text-align: right;
+
+}
+.menu1 .menuBox,
+.menu7 .menuBox,
+.menu8 .menuBox,
+.menu6 .menuBox  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.menu1::before, 
+.menu2::before, 
+.menu3::before, 
+.menu4::before, 
+.menu5::before, 
+.menu6::before, 
+.menu7::before, 
+.menu8::before{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    border-style: solid;
+    border-color: black;
+}
+.menu1::before {
+    right: -15%;
+    top: 10px;
+    transform: skewX(70deg);
+    border-width: 1px 2px 0 0;
+}
+
+.menu2::before {
+    left: -13%;
+    top: 10px;
+    transform: skewX(-70deg);
+    border-width: 1px 0 0 2px;
+}
+.menu3::before {
+    left: -1%;
+    top: 10px;
+    transform: skewX(-70deg);
+    border-width: 1px 0 0 2px;
+}
+ 
+.menu4::before {
+    left: -1%;
+    bottom: 90%;
+    transform: skewX(70deg) rotateX(180deg);
+    border-width: 1px 0px 0 2px;
+}
+ 
+.menu5::before {
+    left: -6%;
+    bottom: 90%;
+    transform: skewX(70deg) rotateX(180deg);
+    border-width: 1px 0px 0 2px;
+}
+ 
+.menu6::before {
+    right: -13%;
+    bottom: 85%;
+    transform: skewX(-70deg) rotateX(180deg);
+    border-width: 1px 2px 0 0;
+}
+ 
+.menu7::before {
+    right: 0%;
+    bottom: 85%;
+    transform: skewX(-70deg) rotateX(180deg);
+    border-width: 1px 2px 0 0;
+}
+.menu8::before {
+    right: 2%;
+    top: 10px;
+    transform: skewX(70deg);
+    border-width: 1px 2px 0 0;
+}
+.arrowRight {
+    width: 30px;
+    /* transform: rotate(40deg); */
+    margin-top: 0;
+    object-fit: cover;
+    height: 50px;
+}
+.logoText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1190px;
+    text-align: center;
+}
+.logoText img{
+        height: 125px;
+        width: 100%;
+        object-fit: cover;
+        max-width: 500px;
+}
+.logoText p {
+    font-size: 28px;
+    margin-bottom: 11px;
+    font-weight: 300;
+    max-width: 1080px;
+    font-family: helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif;
+}
+
+.phoneMenu{
+    padding:50px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.phoneMenu .mobilemenu{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.phoneMenu .mobilemenu img{
+    max-width: 200px;
+}
+.phoneMenu .mobilemenu ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    gap: 5px;
+}
+.phoneMenu .mobilemenu a{
+text-decoration: none;
+font-size: 16px;
+color: #000000;
+}
+.phoneMenu .mobilemenu a:hover{
+    text-decoration: underline;
+}
+.phoneMenu{
+    display: none;
+}
+.btnCustom{
+    transition: all 0.2s ease, visibility 0s;
+    background: #222222;
+    border-radius: 5px;
+    color: #ffffff;
+    border: 1px solid #222222;
+    width: 266px;
+    height: 64px;
+    font-size: 18px;
+    font-weight: 700;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+     
+    font-weight: 600;
+    flex-basis: auto;
+    flex-direction: row;
+    flex-grow: 1; 
+    justify-content: center;
+    text-decoration: none;
+}
+.btnCustom:hover {
+    background: #FFFFFF;
+    color: #222222;
+}
+@media(max-width: 767px){
+    .vh{
+        display: none;
+    }
+    .phoneMenu{
+        display: flex;
+    }
+    .logoText{
+        margin-bottom: 20px;
+    }
+    .logoText p {
+        font-size: 14px;
+        margin-bottom: 10px;
+        font-weight: 300;
+        max-width: 500px;
+        font-family: helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif;
+    }
+}
